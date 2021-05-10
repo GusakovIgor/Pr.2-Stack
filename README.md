@@ -24,7 +24,7 @@ It's just a dynamic array, that works by special rules:
 - We can also open mentos pack from the bottom and all dragees will fall down, so we will have only empty pack. Simillar, we can clear our stack
 - And there is something else stack can do. It's implimented using dynamic array, so what will happen, when we'll put too much dragees in it? Segfault? Of course not, stack can expand when it's filled and it can free some space, when there are too few elements in it. Those operations are called expansion and free
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c340bbe9-2823-43ef-a634-2f3c068b454b/Stack_-_introduction.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c340bbe9-2823-43ef-a634-2f3c068b454b/Stack_-_introduction.png)
+![Introduction](https://github.com/GusakovIgor/Pr.2-Stack/blob/main/img/Stack%20-%20introduction.png)
 
 ### Implementation of all these functions you can find in Stack_Main.cpp
 
@@ -61,12 +61,14 @@ Canaries protecting anybody from going beyond the array boundaries
     `}`
 
     If you'll start this code (simply printing all elements in stack changing them previously) with one element in stack it will break right boundary and only ASSERT_OK will tell you what happened. It will give you full information about error in "Logs.txt" file:
-
+    
+    ![Crashed_1](https://github.com/GusakovIgor/Pr.2-Stack/blob/main/img/Stack_Crashed_1.png)
+    
     Don't panic, I'll tell you all about what happening here.
 
 - Idea of Canaries
 
-    ![Alt text](https://drive.google.com/file/d/1F7PzSYgJjbwYUAojfCeXJFxftVUi0eU7/view?usp=sharing)
+    ![Canaries](https://github.com/GusakovIgor/Pr.2-Stack/blob/main/img/Stack%20-%20canaries.png)
 
     And after constructing stack structure we saving pointers on canaries andd always checking, that they are equal with start value
 
@@ -74,7 +76,7 @@ Canaries protecting anybody from going beyond the array boundaries
 
     So if we can do such a thing with hole stack structure, why cannot we do that with array?
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/babf3e1e-714c-4b0f-9d18-81c65d326f5c/Stack_-_both_canaries_(1).png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/babf3e1e-714c-4b0f-9d18-81c65d326f5c/Stack_-_both_canaries_(1).png)
+    ![Both Canaries](https://github.com/GusakovIgor/Pr.2-Stack/blob/main/img/Stack%20-%20both%20canaries.png)
 
 ## Hash
 
