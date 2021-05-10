@@ -1,0 +1,21 @@
+ERROR in function "StackPush" with code: 0
+FILLING_ERROR: Some value in stk is NAN when it shouldn't be, or it's not NAN when should be
+
+Stack (NOT OK) [0x55fc2d07d898]
+Hash = 11364553371240121
+size = 2
+capacity = 4
+
+Canary_2L = beef
+
+Canary_1L = c0ffee
+array [0x55fc2d07da68]
+{
+    * [0] = nan
+    * [1] = nan
+    * [2] = nan
+    * [3] = nan
+}
+Canary_1R = c0ffee
+
+Canary_2R = beef
