@@ -1,7 +1,7 @@
 # Pr.2-Stack
 # Introduction
 
-### First of all I highly recommend you to read this README in my [Notion](https://www.notion.so/Super-protected-stack-e12adfb68cd14ea48b7b01f2a0f6d036) (it's more colourfull and clear)
+### First of all I highly recommend you to read this README in my [Notion](https://www.notion.so/Super-protected-stack-e12adfb68cd14ea48b7b01f2a0f6d036) (it's more colourfull and clear). But if you don't want to, you can read it here.
 
 ### Let me introduce you a pretty cool, simple project, that can help to:
 
