@@ -1,6 +1,8 @@
 # Pr.2-Stack
 # Introduction
 
+### First of all I highly recommend you to read this README in my [Notion](https://www.notion.so/Super-protected-stack-e12adfb68cd14ea48b7b01f2a0f6d036) (it's more colourfull and clear)
+
 ### Let me introduce you a pretty cool, simple project, that can help to:
 
 - Understand how classical data structure "stack" works in details
@@ -96,9 +98,18 @@ Hash is protecting user from changing something in stack by himself, not using s
 
     If you'll start this code ASSERT_OK will trigger end your program telling you to check out "Logs.txt" file:
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3e1e917-cf58-475a-b8d6-73814152882b/Stack_Crashed_2.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3e1e917-cf58-475a-b8d6-73814152882b/Stack_Crashed_2.png)
+    ![Crashed_2](https://github.com/GusakovIgor/Pr.2-Stack/blob/main/img/Stack_Crashed_2.png)
 
 - Idea of Hash
+
+    - After every "legal" operation (push, pop, clear, expansion, free) we updating hash of stack
+    - ASSERT_OK calculate current hash and compares it with saved hash
+        - If they don't match returning HASH_PROTECTION_ERROR
+        - Hash is calculating by every byte in stack and it's array, so we need to do something with saved hash value (cause it saved in stack and will affect
+          hash counting)
+        - Every time we calculating hash, we saving current hash in temporary variable, replacing it with zero, calculating new hash and putting it in stack. Than
+          comparing it with old one.
+    - So user can arrange ASSERT_OKs in program to check for mistakes in filling or changing stack
 
 # Building
 
